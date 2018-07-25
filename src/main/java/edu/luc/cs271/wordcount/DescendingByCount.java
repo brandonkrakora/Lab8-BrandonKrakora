@@ -6,9 +6,11 @@ import java.util.Map;
 /** The comparison strategy for sorting the array by the word count. */
 public class DescendingByCount implements Comparator<Map.Entry<String, Integer>> {
   public int compare(final Map.Entry<String, Integer> l, final Map.Entry<String, Integer> r) {
-
-    // TODO turn this into descending order using the getValue() method on l and r
-    return -1;
-
+    // Completed turn this into descending order using the getValue() method on l and r
+      if (r.getValue() > l.getValue())
+        return 1;
+      else if (r.getValue() < l.getValue())
+        return -1;
+      return 0;
   }
 }
